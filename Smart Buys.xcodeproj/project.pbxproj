@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		709F5E8D232451D400AC497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5E8C232451D400AC497F /* AppDelegate.swift */; };
-		709F5E8F232451D400AC497F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5E8E232451D400AC497F /* ViewController.swift */; };
+		709F5E8F232451D400AC497F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5E8E232451D400AC497F /* ItemsViewController.swift */; };
 		709F5E92232451D400AC497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709F5E90232451D400AC497F /* Main.storyboard */; };
 		709F5E94232451D600AC497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709F5E93232451D600AC497F /* Assets.xcassets */; };
 		709F5E97232451D600AC497F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709F5E95232451D600AC497F /* LaunchScreen.storyboard */; };
+		709F5EA12324681900AC497F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA02324681900AC497F /* ItemCell.swift */; };
+		709F5EA32324698E00AC497F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA22324698E00AC497F /* Api.swift */; };
+		709F5EA523246B0200AC497F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA423246B0200AC497F /* DetailViewController.swift */; };
+		709F5EA923248C8C00AC497F /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA823248C8C00AC497F /* DetailCell.swift */; };
+		709F5EAF2324968700AC497F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EAE2324968700AC497F /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		709F5E89232451D400AC497F /* Smart Buys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Buys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709F5E8C232451D400AC497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		709F5E8E232451D400AC497F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		709F5E8E232451D400AC497F /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		709F5E91232451D400AC497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		709F5E93232451D600AC497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709F5E96232451D600AC497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		709F5E98232451D600AC497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709F5EA02324681900AC497F /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		709F5EA22324698E00AC497F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		709F5EA423246B0200AC497F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		709F5EA823248C8C00AC497F /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		709F5EAE2324968700AC497F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		709F5E8B232451D400AC497F /* Smart Buys */ = {
 			isa = PBXGroup;
 			children = (
+				709F5EAD2324965F00AC497F /* Extensions */,
+				709F5EAC232495E200AC497F /* Cells */,
+				709F5EAB232495D300AC497F /* Models */,
+				709F5EAA232495A900AC497F /* Controllers */,
 				709F5E8C232451D400AC497F /* AppDelegate.swift */,
-				709F5E8E232451D400AC497F /* ViewController.swift */,
 				709F5E90232451D400AC497F /* Main.storyboard */,
 				709F5E93232451D600AC497F /* Assets.xcassets */,
 				709F5E95232451D600AC497F /* LaunchScreen.storyboard */,
 				709F5E98232451D600AC497F /* Info.plist */,
 			);
 			path = "Smart Buys";
+			sourceTree = "<group>";
+		};
+		709F5EAA232495A900AC497F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				709F5E8E232451D400AC497F /* ItemsViewController.swift */,
+				709F5EA423246B0200AC497F /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		709F5EAB232495D300AC497F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				709F5EA22324698E00AC497F /* Api.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		709F5EAC232495E200AC497F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				709F5EA823248C8C00AC497F /* DetailCell.swift */,
+				709F5EA02324681900AC497F /* ItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		709F5EAD2324965F00AC497F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				709F5EAE2324968700AC497F /* CustomButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709F5E8F232451D400AC497F /* ViewController.swift in Sources */,
+				709F5E8F232451D400AC497F /* ItemsViewController.swift in Sources */,
+				709F5EA12324681900AC497F /* ItemCell.swift in Sources */,
+				709F5EA523246B0200AC497F /* DetailViewController.swift in Sources */,
+				709F5EA32324698E00AC497F /* Api.swift in Sources */,
+				709F5EAF2324968700AC497F /* CustomButton.swift in Sources */,
+				709F5EA923248C8C00AC497F /* DetailCell.swift in Sources */,
 				709F5E8D232451D400AC497F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
