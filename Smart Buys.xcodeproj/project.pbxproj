@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7010D79D2325BDB0006CA639 /* worldwide.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7010D79C2325BDB0006CA639 /* worldwide.svg */; };
+		7010D7AE232721AB006CA639 /* worldwide.png in Resources */ = {isa = PBXBuildFile; fileRef = 7010D7AB232721AB006CA639 /* worldwide.png */; };
+		7010D7AF232721AB006CA639 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 7010D7AC232721AB006CA639 /* plus.png */; };
+		7010D7B0232721AB006CA639 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 7010D7AD232721AB006CA639 /* gps.png */; };
 		709F5E8D232451D400AC497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5E8C232451D400AC497F /* AppDelegate.swift */; };
 		709F5E8F232451D400AC497F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5E8E232451D400AC497F /* ItemsViewController.swift */; };
 		709F5E92232451D400AC497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709F5E90232451D400AC497F /* Main.storyboard */; };
@@ -17,9 +21,15 @@
 		709F5EA523246B0200AC497F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA423246B0200AC497F /* DetailViewController.swift */; };
 		709F5EA923248C8C00AC497F /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EA823248C8C00AC497F /* DetailCell.swift */; };
 		709F5EAF2324968700AC497F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EAE2324968700AC497F /* CustomButton.swift */; };
+		709F5EB123251EEC00AC497F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EB023251EEC00AC497F /* TabBarViewController.swift */; };
+		709F5EB32325232900AC497F /* UIView+decoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F5EB22325232900AC497F /* UIView+decoration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7010D79C2325BDB0006CA639 /* worldwide.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = worldwide.svg; path = ../../../../Downloads/worldwide.svg; sourceTree = "<group>"; };
+		7010D7AB232721AB006CA639 /* worldwide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = worldwide.png; sourceTree = "<group>"; };
+		7010D7AC232721AB006CA639 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		7010D7AD232721AB006CA639 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
 		709F5E89232451D400AC497F /* Smart Buys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Buys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709F5E8C232451D400AC497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709F5E8E232451D400AC497F /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +42,8 @@
 		709F5EA423246B0200AC497F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		709F5EA823248C8C00AC497F /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		709F5EAE2324968700AC497F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		709F5EB023251EEC00AC497F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		709F5EB22325232900AC497F /* UIView+decoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+decoration.swift"; path = "../../../../../Downloads/Itunes API/Itunes API/Extensions/UIView+decoration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7010D799232539B5006CA639 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7010D79E2325BE15006CA639 /* Images.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				7010D7AD232721AB006CA639 /* gps.png */,
+				7010D7AC232721AB006CA639 /* plus.png */,
+				7010D7AB232721AB006CA639 /* worldwide.png */,
+			);
+			path = Images.xcassets;
+			sourceTree = "<group>";
+		};
 		709F5E80232451D400AC497F = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +93,17 @@
 		709F5E8B232451D400AC497F /* Smart Buys */ = {
 			isa = PBXGroup;
 			children = (
+				7010D79E2325BE15006CA639 /* Images.xcassets */,
 				709F5EAD2324965F00AC497F /* Extensions */,
 				709F5EAC232495E200AC497F /* Cells */,
 				709F5EAB232495D300AC497F /* Models */,
+				7010D799232539B5006CA639 /* Classes */,
 				709F5EAA232495A900AC497F /* Controllers */,
 				709F5E8C232451D400AC497F /* AppDelegate.swift */,
 				709F5E90232451D400AC497F /* Main.storyboard */,
 				709F5E93232451D600AC497F /* Assets.xcassets */,
 				709F5E95232451D600AC497F /* LaunchScreen.storyboard */,
+				7010D79C2325BDB0006CA639 /* worldwide.svg */,
 				709F5E98232451D600AC497F /* Info.plist */,
 			);
 			path = "Smart Buys";
@@ -82,6 +114,7 @@
 			children = (
 				709F5E8E232451D400AC497F /* ItemsViewController.swift */,
 				709F5EA423246B0200AC497F /* DetailViewController.swift */,
+				709F5EB023251EEC00AC497F /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +139,7 @@
 		709F5EAD2324965F00AC497F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				709F5EB22325232900AC497F /* UIView+decoration.swift */,
 				709F5EAE2324968700AC497F /* CustomButton.swift */,
 			);
 			path = Extensions;
@@ -169,9 +203,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7010D79D2325BDB0006CA639 /* worldwide.svg in Resources */,
+				7010D7AE232721AB006CA639 /* worldwide.png in Resources */,
 				709F5E97232451D600AC497F /* LaunchScreen.storyboard in Resources */,
 				709F5E94232451D600AC497F /* Assets.xcassets in Resources */,
 				709F5E92232451D400AC497F /* Main.storyboard in Resources */,
+				7010D7AF232721AB006CA639 /* plus.png in Resources */,
+				7010D7B0232721AB006CA639 /* gps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,10 +220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709F5EB123251EEC00AC497F /* TabBarViewController.swift in Sources */,
 				709F5E8F232451D400AC497F /* ItemsViewController.swift in Sources */,
 				709F5EA12324681900AC497F /* ItemCell.swift in Sources */,
 				709F5EA523246B0200AC497F /* DetailViewController.swift in Sources */,
 				709F5EA32324698E00AC497F /* Api.swift in Sources */,
+				709F5EB32325232900AC497F /* UIView+decoration.swift in Sources */,
 				709F5EAF2324968700AC497F /* CustomButton.swift in Sources */,
 				709F5EA923248C8C00AC497F /* DetailCell.swift in Sources */,
 				709F5E8D232451D400AC497F /* AppDelegate.swift in Sources */,
@@ -337,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8VX7T6P4D;
 				INFOPLIST_FILE = "Smart Buys/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rugyron.SmartBuys.Smart-Buys";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8VX7T6P4D;
 				INFOPLIST_FILE = "Smart Buys/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rugyron.SmartBuys.Smart-Buys";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
