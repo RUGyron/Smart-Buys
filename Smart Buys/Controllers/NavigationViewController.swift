@@ -1,27 +1,22 @@
 //
-//  TabBarViewController.swift
+//  NavigationViewController.swift
 //  Smart Buys
 //
-//  Created by ipopat on 08/09/2019.
+//  Created by ipopat on 13/09/2019.
 //  Copyright © 2019 rugyron. All rights reserved.
 //
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
-    
+class NavigationViewController: UINavigationController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        self.navigationItem.tintColor = UIColor(red: 39, green: 39, blue: 46)
+        // Do any additional setup after loading the view.
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-//        print(tabBar.frame.size.height)
-//        tabBar.frame.size.height = 90
-//        tabBar.frame.origin.y = UIScreen.main.bounds.height - 90
-    }
-    
+
     /*
     // MARK: - Navigation
 

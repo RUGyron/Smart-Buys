@@ -17,6 +17,14 @@ var products = [
     ["Name": "Apple4", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
     ["Name": "Apple5", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
     ["Name": "Apple6", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple7", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple0", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple1", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple2", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple3", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple4", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple5", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
+    ["Name": "Apple6", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"],
     ["Name": "Apple7", "My price": "52", "Public price": "34", "Image URL": "https://chudesalegko.ru/wp-content/uploads/2013/07/yabloko.jpg"]
 ]
 
@@ -35,3 +43,6 @@ func setImage(from urlString: String, imageView: UIImageView) {
     }
 
 }
+
+//darkBackground = 
+

@@ -12,42 +12,42 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var footerView: UIView!
-    @IBOutlet weak var addProductButton: UIButton!
     @IBOutlet weak var setBudgetButton: UIButton!
     @IBOutlet weak var freeLocalBudget: UILabel!
     @IBOutlet weak var freePublicBudget: UILabel!
+    @IBOutlet weak var addProductButton: UIButton!
     
     var userBudget = Int()
-    
+    let impact = UIImpactFeedbackGenerator()
+
     @IBAction func setBudgetBtnPressed(sender: UIButton) {
+        impact.impactOccurred()
         setBudgetFromAlert()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        addButton
-        addProductButton.addTarget(self, action: Selector(("addBtnPressed")), for: .touchUpInside)
-        footerView.addSubview(addProductButton)
 
-//        myBudget
-        
+        addProductButton.addTarget(self, action: Selector(("addBtnPressed")), for: .touchUpInside)
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 10.0, y: 0.0, width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height - 160)
+        
+        self.view.bringSubviewToFront(addProductButton)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let budgets = calculateBudgets()
         
-        var freeLocal = userBudget - budgets["localBudget"]!
-        var freePublic = userBudget - budgets["publicBudget"]!
+        let freeLocal = userBudget - budgets["localBudget"]!
+        let freePublic = userBudget - budgets["publicBudget"]!
         
         if freeLocal < 0 {
             freeLocalBudget.textColor = .red
-            freeLocal = -freeLocal
+//            freeLocal = -freeLocal
         } else {
             freeLocalBudget.textColor = .green
         }
@@ -55,7 +55,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if freePublic < 0 {
             freePublicBudget.textColor = .red
-            freePublic = -freePublic
+//            freePublic = -freePublic
         } else {
             freePublicBudget.textColor = .green
         }
@@ -63,7 +63,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @objc func addBtnPressed() {
-//        let detailViewController = DetailViewController(currentProduct: products[0])
+        impact.impactOccurred()
         currentProduct = ["Name": "", "My price": "", "Public price": "", "Image URL": ""]
         let detailViewController = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
         detailViewController.currentProduct = currentProduct
@@ -97,10 +97,19 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 70.0
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 0, 0)
+        cell.layer.transform = translationTransform
+        UIView.animate(withDuration: 0.35, delay: 1 * Double(tableView.visibleCells.firstIndex(of: cell) ?? 0), animations: {
+            cell.layer.transform = CATransform3DIdentity
+        })
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        impact.impactOccurred()
         currentProduct = products[indexPath.section]
         let detailViewController = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
         detailViewController.currentProduct = currentProduct
@@ -135,15 +144,17 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
-            self.userBudget = Int(textField!.text!)!
+            if textField!.text! != "" {
+                self.userBudget = Int(textField!.text!)!
+            }
             let budgets = self.calculateBudgets()
             
-            var freeLocal = self.userBudget - budgets["localBudget"]!
-            var freePublic = self.userBudget - budgets["publicBudget"]!
+            let freeLocal = self.userBudget - budgets["localBudget"]!
+            let freePublic = self.userBudget - budgets["publicBudget"]!
             
             if freeLocal < 0 {
                 self.freeLocalBudget.textColor = .red
-                freeLocal = -freeLocal
+//                freeLocal = -freeLocal
             } else {
                 self.freeLocalBudget.textColor = .green
             }
@@ -151,7 +162,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             if freePublic < 0 {
                 self.freePublicBudget.textColor = .red
-                freePublic = -freePublic
+//                freePublic = -freePublic
             } else {
                 self.freePublicBudget.textColor = .green
             }
